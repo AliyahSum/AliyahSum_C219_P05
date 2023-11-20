@@ -10,77 +10,145 @@
         <style>
             .icon,
             .text {
-                vertical-align: middle ;
-                display: inline-block ;
-                margin: 10px ;
+                vertical-align: middle;
+                display: inline-block;
+                margin: 10px;
             }
+
             .navbar-nav {
-                font-family:'Arial' ;
-                border-radius: 15% ;
-                margin: 10px
+                font-family: 'Arial';
+                border-radius: 15%;
+                margin: 10px;
             }
-            .video {
+
+            .navbar-nav,
+            .card-img-top,
+            .navbar {
+                position: relative;
+                z-index: 2;
+            }
+
+            .text {
+                font-size: 35px;
+            }
+        
+            .vid-container, #bg-vid {
                 width: 100vw;
-                z-index: -1 ;
                 height: 100vh;
                 object-fit: cover;
                 position: fixed;
                 top: 0;
                 left: 0;
+                z-index: 1;
             }
+            
             .para, .card-text {
                 font-family: 'DM Serif Display' ;
             }
-            .footer-links {
-                font-family:'Arial' ;
-                margin: 10px ;
-                color: white ;
+            
+            footer {
+                z-index: 5;
+                position: relative;
             }
-        </style>
+            
+            .footer-links {
+                font-family: 'Arial';
+                margin: 10px;
+                color: white;
+                list-style-type: none;
+                padding: 0;
+            }
+
+            .footer-item {
+                display: inline-block;
+                margin-right: 15px;
+            }
+
+            .footer-link {
+                text-decoration: none;
+                color: white;
+            }
+            
+            @media only screen and (max-width: 768px) {
+                .icon {
+                    text-align: center;
+                    float: none;
+                    width: 100%;
+                }
+                .text {
+                    text-align: center;
+                    float: none;
+                    width: 100%;
+                    margin-left: -100px;
+                    font-size: 40px;
+                }
+                #bg-vid {
+                    display: none;
+                }
+
+                .vid-container {
+                    background: url('images/indonesia_pic.jpg') center center / cover;
+                }
+                
+                section {
+                    text-align: center;
+                    float: none;
+                    width: 100%;
+                    padding-bottom: 25px;
+                }
+            }
+        </style>       
     </head>
     <body>
-        <nav class="main-menu navbar-expand-sm bg-success navbar-dark">            
-            <div class="container-fluid mt3">
+        <nav class="navbar navbar-expand-md navbar-dark bg-success">
+            <div class="container-fluid mt-3">
                 <div class="card-img-top d-flex align-items-center">
                     <span class="icon">
                         <svg width="100" height="100">
-                        <circle cx="50" cy="50" r="45" style="fill:lightgrey; stroke:darkgrey ; stroke-width:5" />
-                        <rect x="22" y="22" width="57" height="57" style="fill:white; fill-opacity:0.1; stroke:blue; stroke-width:3;" />
-                        <rect x="42" y="-28" width="57" height="57" transform="rotate(45)" style="fill:white; fill-opacity:0.1; stroke:red; stroke-width:3;" />
-                        <text x="26" y="62" style="fill:rgb(225,188,32); font-family:math; font-size:xx-large;">WX</text>
+                            <circle cx="50" cy="50" r="45" style="fill:lightgrey; stroke:darkgrey ; stroke-width:5" />
+                            <rect x="22" y="22" width="57" height="57" style="fill:white; fill-opacity:0.1; stroke:blue; stroke-width:3;" />
+                            <rect x="42" y="-28" width="57" height="57" transform="rotate(45)" style="fill:white; fill-opacity:0.1; stroke:red; stroke-width:3;" />
+                            <text x="26" y="62" style="fill:rgb(225,188,32); font-family:math; font-size:xx-large;">WX</text>
                         </svg>
-                    </span>               
+                    </span>
 
-                    <span class="text" style="font-size:35; color:white; font-family:'DM Serif Display'; "><b>World Xplore</b></span>                          
-                </div>            
+                    <span class="text" style="font-size:35; color:white; font-family:'DM Serif Display'; "><b>World Xplore</b></span>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="homepage.html"><b>Home</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="packageTours.html"><b>Package Tours</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><b>Rediscover Singapore</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><b>Cruises</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactUs.html"><b>Contact Us</b></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            
-            
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html"><b>Home</b></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="packageTours.html"><b>Package Tour</b>s</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><b>Rediscover Singapore</b></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><b>Cruises</b></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contactUs.html"><b>Contact Us</b></a>
-                </li>
-              </ul>
         </nav>
         
-        
-        <video class="video" width="1240"  autoplay muted loop>
-            <source src="videos/indonesia_video.mp4" type="video/mp4">
-        </video>
+        <div class="vid-container">
+            <video width="1240" autoplay muted loop id="bg-vid">
+                <source src="videos/indonesia_video.mp4" type="video/mp4">
+            </video>
+        </div>
         
         <br/><br/>
+        
         <div class="container-fluid mt3">
             <div class="row">
                 <div class="col">
@@ -114,24 +182,24 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <br/><br/>
-        <footer class="foot bg-success me-auto">
+        </div>    
+        
+        <footer class="foot bg-success">
             <ul class="footer-links">
                 <li class="footer-item">
-                    <a class="footer-link" href="index.html"><b>Home</b></a>
+                    <a class="footer-link" href="homepage.html">Home</a>
                 </li>
                 <li class="footer-item">
-                  <a class="footer-link" href="packageTours.html"><b>Package Tour</b>s</a>
+                    <a class="footer-link" href="packageTours.html">Package Tours</a>
                 </li>
                 <li class="footer-item">
-                  <a class="footer-link" href="#"><b>Rediscover Singapore</b></a>
+                    <a class="footer-link" href="#">Rediscover Singapore</a>
                 </li>
                 <li class="footer-item">
-                  <a class="footer-link" href="#"><b>Cruises</b></a>
+                    <a class="footer-link" href="#">Cruises</a>
                 </li>
                 <li class="footer-item">
-                  <a class="footer-link" href="contactUs.html"><b>Contact Us</b></a>
+                    <a class="footer-link" href="contactUs.html">Contact Us</a>
                 </li>
             </ul>
         </footer>

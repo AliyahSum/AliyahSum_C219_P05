@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Contact Us</title>
+        <title>World Xplore</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -42,6 +42,51 @@
                 z-index: 1;
             }
             
+            section {                
+                justify-content: center;
+                align-content: center;
+                gap: 20px;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                display: inline-block;
+                width: 33%;
+                z-index: 3;
+                position: relative;
+            }
+            
+            .article {
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+                background-color: rgba(255, 255, 255, 0.5);
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                max-width: 300px;
+                z-index: 4;
+                position: relative;
+            }
+
+            .para {
+                font-family: 'DM Serif Display';
+            }
+
+            figure {
+                margin: 0;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+
+            figcaption {
+                margin-top: 10px;
+                font-style: italic;
+                color: #555;
+            }
+            
             footer {
                 z-index: 5;
                 position: relative;
@@ -65,18 +110,6 @@
                 color: white;
             }
             
-            .article {
-                display: grid ;
-                background-color: rgba(255,255,255,.5) ;
-            }
-            
-            .shape {
-                width: 50px;
-                height: 50px;
-                background-color:rgba(178,33,33);
-                position: relative ;
-                animation: myrect 5s linear 2s infinite alternate;
-            }
             @media only screen and (max-width: 768px) {
                 .icon {
                     text-align: center;
@@ -104,34 +137,8 @@
                     width: 100%;
                     padding-bottom: 25px;
                 }
-            }    
-            
-            @keyframes myrect {
-                0%   {transform: rotate(0deg);
-                      background-color:rgba(178,33,33);
-                      left:0%;
-                      top:0%;}
-                25%  {transform: rotate(45deg);
-                      background-color:rgba(89,33,33);
-                      left:50%;
-                      top:10%;
-                      clip-path:polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);}
-                50%  {transform: rotate(90deg);
-                      background-color:rgba(0,0,0);
-                      left:100%;
-                      top:0%;
-                      clip-path:polygon(50% 0%, 100% 100%, 0% 100%);}
-                75%  {transform: rotate(135deg);
-                      background-color:rgba(11,2,90);
-                      left:50%;
-                      top:10%;
-                      clip-path:polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);}
-                100% {transform: rotate(180deg);
-                      background-color:rgba(11,2,166);
-                      left:0%;
-                      top:0%;}
-            }            
-        </style>     
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-success">
@@ -183,22 +190,38 @@
         
         <br/><br/>
         
-        <section>
-            <article class="article" style="text-align: center;">
-                <br/>
-                <h1>Contact us here!</h1>
-
-                <br/><br/>
-
-                <h5>Call us: +65 9187 3654</h5>
-                <h5>Email us: worldXploreTours@gmail.com</h5>
-                <br/><br/>
-                <div class="shape"></div>
-                <br/><br/>
+        <section class="section">
+            <article class="article">
+                <h1>Discovering Indonesia</h1>
+                <figure>                  
+                    <img width="200" height="100" src="images/pexels-tom-fisk-1551491.jpg" alt="Indonesia"/>
+                    <figcaption>Explore Indonesia's Diverse Beauty</figcaption>
+                </figure>
+                <p class="para">Welcome to the enchanting archipelago of Indonesia, a diverse and captivating nation spanning across thousands of islands in Southeast Asia. Indonesia offers a unique blend of stunning natural beauty, rich cultural heritage, and warm hospitality. From the lush jungles and pristine beaches to ancient temples and bustling cities, this nation promises an unforgettable travel experience.</p>
             </article>            
         </section>
-        
-        <br/><br/>
+
+        <section class="section">            
+            <article class="article">
+                <h1>Discovering Vietnam</h1>
+                <figure>                  
+                    <img width="200" height="100" src="images/pexels-tomáš-malík-1660996.jpg" alt="Vietnam"/>
+                    <figcaption>Experience Vibrant Vietnam</figcaption>
+                </figure>
+                <p class="para">Welcome to the captivating and culturally rich nation of Vietnam. Nestled in Southeast Asia, Vietnam offers a mesmerising blend of history, natural beauty, and vibrant traditions. With its stunning landscapes, ancient temples, bustling cities, and mouthwatering cuisine, this country is an irresistible destination for travellers seeking adventure and enlightenment.</p>
+            </article>
+        </section>
+
+        <section class="section">
+            <article class="article">
+                <h1>Discovering Malaysia</h1>
+                <figure>                 
+                    <img width="200" height="100" src="images/pexels-zukiman-mohamad-94420.jpg" alt="Malaysia"/>
+                    <figcaption>Adventure Malaysia's Fusion Tourism</figcaption>
+                </figure>
+                <p class="para">Welcome to the colourful tapestry of cultures, landscapes, and flavours that is Malaysia. This captivating Southeast Asian nation offers a delightful fusion of modernity and tradition, stunning natural beauty, and a diverse culinary scene. From bustling cities to lush rainforests, Malaysia is a traveller's paradise that beckons with open arms.</p>
+            </article>
+        </section>
         
         <footer class="foot bg-success">
             <ul class="footer-links">
