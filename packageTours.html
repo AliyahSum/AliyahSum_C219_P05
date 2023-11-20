@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <title>Package Tours</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        
+        <style>
+            .icon,
+            .text {
+                vertical-align: middle ;
+                display: inline-block ;
+                margin: 10px ;
+            }
+            .navbar-nav {
+                font-family:'Arial' ;
+                border-radius: 15% ;
+                margin: 10px
+            }
+            .video {
+                width: 100vw;
+                z-index: -1 ;
+                height: 100vh;
+                object-fit: cover;
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+            .para, .card-text {
+                font-family: 'DM Serif Display' ;
+            }
+            .footer-links {
+                font-family:'Arial' ;
+                margin: 10px ;
+                color: white ;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="main-menu navbar-expand-sm bg-success navbar-dark">            
+            <div class="container-fluid mt3">
+                <div class="card-img-top d-flex align-items-center">
+                    <span class="icon">
+                        <svg width="100" height="100">
+                        <circle cx="50" cy="50" r="45" style="fill:lightgrey; stroke:darkgrey ; stroke-width:5" />
+                        <rect x="22" y="22" width="57" height="57" style="fill:white; fill-opacity:0.1; stroke:blue; stroke-width:3;" />
+                        <rect x="42" y="-28" width="57" height="57" transform="rotate(45)" style="fill:white; fill-opacity:0.1; stroke:red; stroke-width:3;" />
+                        <text x="26" y="62" style="fill:rgb(225,188,32); font-family:math; font-size:xx-large;">WX</text>
+                        </svg>
+                    </span>               
+
+                    <span class="text" style="font-size:35; color:white; font-family:'DM Serif Display'; "><b>World Xplore</b></span>                          
+                </div>            
+            </div>
+            
+            
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><b>Home</b></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="packageTours.html"><b>Package Tour</b>s</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><b>Rediscover Singapore</b></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><b>Cruises</b></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contactUs.html"><b>Contact Us</b></a>
+                </li>
+              </ul>
+        </nav>
+        
+        
+        <video class="video" width="1240"  autoplay muted loop>
+            <source src="videos/indonesia_video.mp4" type="video/mp4">
+        </video>
+        
+        <br/><br/>
+        <div class="container-fluid mt3">
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 350px; align-content: center;">
+                        <img class="card-img-top rounded" src="images/pexels-tom-fisk-1551491.jpg" alt="Indonesia">
+                        <div class="card-body bg-light">
+                            <h4 class="card-title">Discovering Indonesia</h4>
+                            <p class="para">Welcome to the enchanting archipelago of Indonesia, a diverse and captivating nation spanning across thousands of islands in Southeast Asia. Indonesia offers a unique blend of stunning natural beauty, rich cultural heritage, and warm hospitality. From the lush jungles and pristine beaches to ancient temples and bustling cities, this nation promises an unforgettable travel experience.</p>
+                            <p class="card-text">Price: $127</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 350px; align-content: center;">
+                        <img class="card-img-top rounded" src="images/pexels-tomáš-malík-1660996.jpg" alt="Vietnam">
+                        <div class="card-body bg-light">
+                            <h4 class="card-title">Discovering Vietnam</h4>
+                            <p class="para">Welcome to the captivating and culturally rich nation of Vietnam. Nestled in Southeast Asia, Vietnam offers a mesmerising blend of history, natural beauty, and vibrant traditions. With its stunning landscapes, ancient temples, bustling cities, and mouthwatering cuisine, this country is an irresistible destination for travellers seeking adventure and enlightenment.</p>
+                            <p class="card-text">Price: $135</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 350px; align-content: center;">
+                        <img class="card-img-top rounded" src="images/pexels-zukiman-mohamad-94420.jpg" alt="Malaysia">
+                        <div class="card-body bg-light">
+                            <h4 class="card-title">Discovering Malaysia</h4>
+                            <p class="para">Welcome to the colourful tapestry of cultures, landscapes, and flavours that is Malaysia. This captivating Southeast Asian nation offers a delightful fusion of modernity and tradition, stunning natural beauty, and a diverse culinary scene. From bustling cities to lush rainforests, Malaysia is a traveller's paradise that beckons with open arms.</p>
+                            <p class="card-text">Price: $143</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/><br/>
+        <footer class="foot bg-success me-auto">
+            <ul class="footer-links">
+                <li class="footer-item">
+                    <a class="footer-link" href="index.html"><b>Home</b></a>
+                </li>
+                <li class="footer-item">
+                  <a class="footer-link" href="packageTours.html"><b>Package Tour</b>s</a>
+                </li>
+                <li class="footer-item">
+                  <a class="footer-link" href="#"><b>Rediscover Singapore</b></a>
+                </li>
+                <li class="footer-item">
+                  <a class="footer-link" href="#"><b>Cruises</b></a>
+                </li>
+                <li class="footer-item">
+                  <a class="footer-link" href="contactUs.html"><b>Contact Us</b></a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>
